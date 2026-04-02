@@ -2,7 +2,7 @@
 const tbody = document.getElementById("output");
 
 function createPromise() {
-  const delay = Math.random() * 2000 + 1000; // 1000–3000 ms
+  const delay = Math.random() * 2000 + 1000;
   return new Promise((resolve) => {
     const start = performance.now();
 
@@ -54,3 +54,5 @@ Promise.all([p1, p2, p3]).then((times) => {
 
   tbody.appendChild(totalRow);
 });
+
+tbody.innerHTML = ""; // removes loading row
